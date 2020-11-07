@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Neth's App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+      .container {
+        max-width: 500px;
+        padding-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href={{ url_for('mynews') }} > My News </a>
+    <div class="container">
+      {% for arc in news %}
+        <h3> User - {{ user.email }} <h3>
+        <p> Content - {{ arc['news'] }} <p> 
+      {% endfor %}
+      
+      <form action="/create" method="POST" >
+        <textarea name="mynews" rows="5" cols="50"> </textarea>
+        <input type="submit">
+      </form>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
