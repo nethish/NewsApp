@@ -7,8 +7,9 @@ import os
 import json
 from user import User
 
-GOOGLE_CLIENT_ID = 'SECRETBRO'
-GOOGLE_CLIENT_SECRET = 'SECRETBRO'
+
+GOOGLE_CLIENT_ID = '569030689502-3e50o9imhdsj8iahsaqqte3a5oudirva.apps.googleusercontent.com'
+GOOGLE_CLIENT_SECRET = 'dt6bh8y7g9V15ka8WPAbl9Bn'
 DISCOVERY_URL = "https://accounts.google.com/.well-known/openid-configuration"
 PROVIDER_CONFIG = requests.get(DISCOVERY_URL).json()
 
